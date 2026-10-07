@@ -12,7 +12,7 @@ type Site = {
 
 export const site: Site = {
   name: "Escuela de Pingpong",
-  city: "tu ciudad",
+  city: "Villa Ciudad Parque",
   description:
     "Aprende técnica, mejora tu juego y diviértete en un ambiente cercano. Grupos para niños y adultos, de iniciación a competición.",
   nav: [

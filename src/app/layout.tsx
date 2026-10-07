@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Geist, Oswald } from "next/font/google";
+import { Header } from "@/app/components/Header";
+import { site } from "@/app/content/site";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -7,15 +9,26 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
+const oswald = Oswald({
+  variable: "--font-oswald",
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
-  title: "Escuela de Pingpong",
-  description: "Clases de pingpong para niños y adultos.",
+  title: site.name,
+  description: site.description,
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="es" className={`${geistSans.variable} h-full antialiased`}>
-      <body className="flex min-h-full flex-col">{children}</body>
+    <html
+      lang="es"
+      className={`${geistSans.variable} ${oswald.variable} h-full antialiased`}
+    >
+      <body className="flex min-h-full flex-col bg-white text-slate-900">
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
