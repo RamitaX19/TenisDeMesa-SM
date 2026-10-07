@@ -1,17 +1,13 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Colores de la marca (provisionales hasta tener el logo) */
+@theme {
+  --color-brand: #172554;
+  --color-accent: #f97316;
 }
 
+/* Fuentes: las variables las crea next/font en layout.tsx */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
+  --font-display: var(--font-oswald);
 }
