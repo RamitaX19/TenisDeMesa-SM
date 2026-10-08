@@ -5,7 +5,7 @@ import { site } from "@/app/content/site";
 
 export function Header() {
   return (
-    <header className="border-b border-white/10 bg-brand text-white">
+    <header className="sticky top-0 border-b border-white/10 bg-brand text-white">
       <Container className="flex h-16 items-center justify-between gap-4">
         <Link
           href="/"
