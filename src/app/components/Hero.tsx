@@ -9,8 +9,8 @@ export function Hero() {
         <p className="font-semibold tracking-widest text-accent uppercase">
           Escuela de pingpong para todas las edades
         </p>
-        <h1 className="mt-4 max-w-3xl font-display text-5xl leading-none font-bold uppercase md:text-7xl">
-          {site.name}
+        <h1 className="mt-4 max-w-3xl font-display text-4xl leading-none font-bold uppercase md:text-5xl">
+          Clases de ping pong en {site.city}
         </h1>
         <p className="mt-6 max-w-xl text-lg text-white/80 md:text-xl">
           {site.description}

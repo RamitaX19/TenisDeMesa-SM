@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Colores de la marca (provisionales hasta tener el logo) */
+/* sacados de logo */
 @theme {
   --color-brand: #062555;
   --color-accent: #67cded;

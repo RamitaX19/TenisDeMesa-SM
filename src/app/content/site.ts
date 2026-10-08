@@ -3,6 +3,17 @@ type NavLink = {
   href: string;
 };
 
+type TimeSlot = {
+  start: string;
+  end: string;
+};
+
+type ScheduleBlock = {
+  title: string;
+  days: string;
+  slots: TimeSlot[];
+};
+
 type Site = {
   name: string;
   city: string;
@@ -11,6 +22,7 @@ type Site = {
   address: string;
   whatsapp: string;
   instagram: string;
+  schedule: ScheduleBlock[];
   nav: NavLink[];
 };
 
@@ -18,14 +30,43 @@ export const site: Site = {
   name: "Tenis de Mesa SM Calamuchita",
   city: "Santa Rosa de Calamuchita",
   description:
-    "Aprende técnica, mejora tu juego y diviértete en un ambiente cercano. Grupos para niños y adultos, de iniciación a competición.",
+    "Aprende técnica, mejora tu juego y diviértete en un ambiente cercano. Para niños y adultos, de iniciación a competición.",
   coach: "Sebastian Molina",
-  address: "SUM-Santa Rosa de Calamuchita",
+  address: "SUM - Centro de Formacion Deportiva Municipal",
   whatsapp: "5493516745726",
   instagram: "https://www.instagram.com/tenisdemesa_sm/",
   nav: [
     { label: "Clases", href: "#clases" },
     { label: "Horarios", href: "#horarios" },
     { label: "Contacto", href: "#contacto" },
+  ],
+  schedule: [
+    {
+      title: "Mañanas",
+      days: "Lunes a Jueves",
+      slots: [
+        { start: "09:00", end: "10:20" },
+        { start: "10:30", end: "11:45" },
+        { start: "12:00", end: "13:20" },
+      ],
+    },
+    {
+      title: "Tardes",
+      days: "Lunes y Miércoles",
+      slots: [
+        { start: "15:00", end: "16:20" },
+        { start: "16:30", end: "17:45" },
+      ],
+    },
+    {
+      title: "Tardes",
+      days: "Martes y Jueves",
+      slots: [
+        { start: "15:00", end: "16:20" },
+        { start: "16:30", end: "17:45" },
+        { start: "18:00", end: "19:20" },
+        { start: "19:30", end: "20:45" },
+      ],
+    },
   ],
 };

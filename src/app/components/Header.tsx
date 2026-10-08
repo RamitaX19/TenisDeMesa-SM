@@ -10,11 +10,11 @@ export function Header() {
       <Container className="flex h-full items-center justify-between gap-4">
         <Link
           href="/"
-          className="item-center flex gap-3 font-display text-lg font-bold tracking-wide uppercase md:text-xl"
+          className="flex items-center gap-3 font-display text-lg font-bold tracking-wide uppercase md:text-xl"
         >
           <Image
             src="/logo.webp"
-            alt=""
+            alt={site.name}
             width={600}
             height={641}
             className="h-20 w-auto"
