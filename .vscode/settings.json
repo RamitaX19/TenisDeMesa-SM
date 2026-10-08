@@ -7,6 +7,13 @@
   },
   "js/ts.tsdk.path": "node_modules/typescript/lib",
   "js/ts.tsdk.promptToUseWorkspaceVersion": true,
-  "cSpell.ignoreWords": ["Formacion", "pingpong"],
+  "cSpell.ignoreWords": [
+    "Escribinos",
+    "Formacion",
+    "Vení",
+    "contanos",
+    "pingpong",
+    "tenisdemesa"
+  ],
   "cSpell.words": ["Calamuchita"]
 }

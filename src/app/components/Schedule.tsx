@@ -1,22 +1,22 @@
 import { Container } from "@/app/components/Container";
 import { site } from "@/app/content/site";
+import { SectionHeading } from "@/app/components/SectionHeading";
 
 export function Schedule() {
   return (
-    <section id="horarios" className="py-20 md:py-28">
+    <section id="horarios" className="bg-mist-300 py-20 md:py-28">
       <Container>
-        <h2 className="font-display text-4xl font-bold text-brand uppercase md:text-5xl">
-          Horarios
-        </h2>
-        <p className="mt-4 max-w-xl text-lg text-slate-600">
-          Elegí el día y el turno que mejor te queden.
-        </p>
+        <SectionHeading
+          eyebrow="Horarios"
+          title="Elegí tu turno"
+          description="Clases de lunes a jueves, a la mañana y a la tarde. Vení el día que mejor te quede."
+        />
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {site.schedule.map((block) => (
             <article
               key={block.days}
-              className="rounded-2xl border border-slate-200 p-6"
+              className="rounded-2xl bg-white p-6 shadow-sm"
             >
               <h3 className="font-display text-2xl font-bold text-brand uppercase">
                 {block.title}

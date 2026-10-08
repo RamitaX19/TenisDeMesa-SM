@@ -23,6 +23,8 @@ type Site = {
   whatsapp: string;
   instagram: string;
   schedule: ScheduleBlock[];
+  phone: string;
+  instagramHandle: string;
   nav: NavLink[];
 };
 
@@ -32,9 +34,11 @@ export const site: Site = {
   description:
     "Aprende técnica, mejora tu juego y diviértete en un ambiente cercano. Para niños y adultos, de iniciación a competición.",
   coach: "Sebastian Molina",
-  address: "SUM - Centro de Formacion Deportiva Municipal",
+  address: "SUM - Centro de Formación Deportiva Municipal",
   whatsapp: "5493516745726",
   instagram: "https://www.instagram.com/tenisdemesa_sm/",
+  instagramHandle: "@tenisdemesa_sm",
+  phone: "+54 9 3516745726",
   nav: [
     { label: "Clases", href: "#clases" },
     { label: "Horarios", href: "#horarios" },
@@ -70,3 +74,7 @@ export const site: Site = {
     },
   ],
 };
+
+const whatsappMessage = "¡Hola Sebastian! Quiero reservar una clase de prueba.";
+
+export const whatsappUrl = `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(whatsappMessage)}`;

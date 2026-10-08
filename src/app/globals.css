@@ -4,6 +4,7 @@
 @theme {
   --color-brand: #062555;
   --color-accent: #67cded;
+  --color-accent-dark: #0a6fa8;
 }
 
 /* Fuentes: las variables las crea next/font en layout.tsx */

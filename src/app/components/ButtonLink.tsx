@@ -5,6 +5,7 @@ type ButtonLinkProps = {
   children: ReactNode;
   variant?: "primary" | "secondary";
   size?: "md" | "sm";
+  external?: boolean;
 };
 
 const variantClasses = {
@@ -22,11 +23,14 @@ export function ButtonLink({
   children,
   variant = "primary",
   size = "md",
+  external = false,
 }: ButtonLinkProps) {
   return (
     <a
       href={href}
-      className={`inline-flex items-center justify-center rounded-full font-semibold transition-colors ${variantClasses[variant]} ${sizeClasses[size]}`}
+      className={`inline-flex items-center justify-center gap-2 rounded-full font-semibold transition-colors ${variantClasses[variant]} ${sizeClasses[size]}`}
+      target={external ? "_blank" : undefined}
+      rel={external ? "noopener noreferrer" : undefined}
     >
       {children}
     </a>
