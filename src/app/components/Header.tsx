@@ -2,16 +2,23 @@ import Link from "next/link";
 import { ButtonLink } from "@/app/components/ButtonLink";
 import { Container } from "@/app/components/Container";
 import { site } from "@/app/content/site";
+import Image from "next/image";
 
 export function Header() {
   return (
-    <header className="sticky top-0 border-b border-white/10 bg-brand text-white">
-      <Container className="flex h-16 items-center justify-between gap-4">
+    <header className="sticky top-0 z-50 h-20 border-b border-white/10 bg-brand text-white">
+      <Container className="flex h-full items-center justify-between gap-4">
         <Link
           href="/"
-          className="font-display text-lg font-bold tracking-wide uppercase md:text-xl"
+          className="item-center flex gap-3 font-display text-lg font-bold tracking-wide uppercase md:text-xl"
         >
-          {site.name}
+          <Image
+            src="/logo.webp"
+            alt=""
+            width={600}
+            height={641}
+            className="h-20 w-auto"
+          />
         </Link>
 
         <nav aria-label="Principal" className="hidden md:block">

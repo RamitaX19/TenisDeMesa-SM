@@ -2,8 +2,8 @@
 
 /* Colores de la marca (provisionales hasta tener el logo) */
 @theme {
-  --color-brand: #172554;
-  --color-accent: #f97316;
+  --color-brand: #062555;
+  --color-accent: #67cded;
 }
 
 /* Fuentes: las variables las crea next/font en layout.tsx */

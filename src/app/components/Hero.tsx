@@ -7,10 +7,10 @@ export function Hero() {
     <section className="bg-brand py-20 text-white md:py-32">
       <Container>
         <p className="font-semibold tracking-widest text-accent uppercase">
-          Escuela de tenis de mesa
+          Escuela de pingpong para todas las edades
         </p>
         <h1 className="mt-4 max-w-3xl font-display text-5xl leading-none font-bold uppercase md:text-7xl">
-          Clases de pingpong en {site.city}
+          {site.name}
         </h1>
         <p className="mt-6 max-w-xl text-lg text-white/80 md:text-xl">
           {site.description}

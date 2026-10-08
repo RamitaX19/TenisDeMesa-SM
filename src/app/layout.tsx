@@ -23,7 +23,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="es"
-      className={`${geistSans.variable} ${oswald.variable} h-full antialiased`}
+      className={`scroll-pt-6 scroll-smooth ${geistSans.variable} ${oswald.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-white text-slate-900">
         <Header />

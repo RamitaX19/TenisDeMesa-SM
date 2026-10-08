@@ -7,5 +7,6 @@
   },
   "js/ts.tsdk.path": "node_modules/typescript/lib",
   "js/ts.tsdk.promptToUseWorkspaceVersion": true,
-  "cSpell.ignoreWords": ["pingpong"]
+  "cSpell.ignoreWords": ["pingpong"],
+  "cSpell.words": ["Calamuchita"]
 }
