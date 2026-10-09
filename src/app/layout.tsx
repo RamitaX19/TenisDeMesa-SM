@@ -3,6 +3,7 @@ import { Geist, Oswald } from "next/font/google";
 import { Header } from "@/app/components/Header";
 import { site } from "@/app/content/site";
 import "./globals.css";
+import { Footer } from "@/app/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,6 +29,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="flex min-h-full flex-col bg-white text-slate-900">
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

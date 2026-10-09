@@ -8,9 +8,17 @@ type TimeSlot = {
   end: string;
 };
 
+type Day = "lunes" | "martes" | "miércoles" | "jueves";
+
+type WeekDay = {
+  id: Day;
+  initial: string;
+};
+
 type ScheduleBlock = {
   title: string;
   days: string;
+  activeDay: Day[];
   slots: TimeSlot[];
 };
 
@@ -46,8 +54,9 @@ export const site: Site = {
   ],
   schedule: [
     {
-      title: "Mañanas",
+      title: "Por las mañanas",
       days: "Lunes a Jueves",
+      activeDay: ["lunes", "martes", "miércoles", "jueves"],
       slots: [
         { start: "09:00", end: "10:20" },
         { start: "10:30", end: "11:45" },
@@ -55,16 +64,18 @@ export const site: Site = {
       ],
     },
     {
-      title: "Tardes",
+      title: "Por las tardes",
       days: "Lunes y Miércoles",
+      activeDay: ["lunes", "miércoles"],
       slots: [
         { start: "15:00", end: "16:20" },
         { start: "16:30", end: "17:45" },
       ],
     },
     {
-      title: "Tardes",
+      title: "Por las tardes",
       days: "Martes y Jueves",
+      activeDay: ["martes", "jueves"],
       slots: [
         { start: "15:00", end: "16:20" },
         { start: "16:30", end: "17:45" },
@@ -74,6 +85,13 @@ export const site: Site = {
     },
   ],
 };
+
+export const weekDays: WeekDay[] = [
+  { id: "lunes", initial: "L" },
+  { id: "martes", initial: "M" },
+  { id: "miércoles", initial: "X" },
+  { id: "jueves", initial: "J" },
+];
 
 const whatsappMessage = "¡Hola Sebastian! Quiero reservar una clase de prueba.";
 

@@ -1,5 +1,5 @@
 import { Container } from "@/app/components/Container";
-import { site } from "@/app/content/site";
+import { site, weekDays } from "@/app/content/site";
 import { SectionHeading } from "@/app/components/SectionHeading";
 
 export function Schedule() {
@@ -18,20 +18,42 @@ export function Schedule() {
               key={block.days}
               className="rounded-2xl bg-white p-6 shadow-sm"
             >
-              <h3 className="font-display text-2xl font-bold text-brand uppercase">
-                {block.title}
-              </h3>
-              <p className="mt-1 text-sm font-medium text-slate-500">
-                {block.days}
-              </p>
+              <div>
+                <p className="mt-1 text-xl font-medium text-slate-500">
+                  {block.title}
+                </p>
+                <h2 className="font-display text-2xl font-bold text-brand uppercase">
+                  {block.days}
+                </h2>
+                <div className="mt-2 flex gap-2" aria-hidden="true">
+                  {weekDays.map((day) => {
+                    const isActive = block.activeDay.includes(day.id);
 
-              <ul className="mt-6 space-y-3">
-                {block.slots.map((slot) => (
-                  <li key={slot.start} className="text-lg font-semibold">
-                    {slot.start} a {slot.end} h
-                  </li>
-                ))}
-              </ul>
+                    return (
+                      <span
+                        key={day.id}
+                        className={`flex size-7 items-center justify-center rounded-full text-xs font-bold ${
+                          isActive
+                            ? "bg-accent text-brand"
+                            : "bg-slate-100 text-slate-400"
+                        }`}
+                      >
+                        {day.initial}
+                      </span>
+                    );
+                  })}
+                </div>
+              </div>
+
+              <div>
+                <ul className="mt-6 space-y-3">
+                  {block.slots.map((slot) => (
+                    <li key={slot.start} className="text-lg font-semibold">
+                      {slot.start} a {slot.end}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </article>
           ))}
         </div>
