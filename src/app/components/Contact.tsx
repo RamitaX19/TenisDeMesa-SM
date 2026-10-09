@@ -1,9 +1,11 @@
 import type { ReactNode } from "react";
-import { AtSign, MapPin, MessageCircle } from "lucide-react";
+import { MapPin } from "lucide-react";
 import { ButtonLink } from "@/app/components/ButtonLink";
 import { Container } from "@/app/components/Container";
 import { SectionHeading } from "@/app/components/SectionHeading";
 import { site, whatsappUrl } from "@/app/content/site";
+import { WhatsAppIcon } from "@/app/components/icons/WhatsAppIcon";
+import { InstagramIcon } from "@/app/components/icons/InstagramIcon";
 
 type ContactItemProps = {
   icon: ReactNode;
@@ -38,7 +40,7 @@ export function Contact() {
           />
           <div className="mt-10">
             <ButtonLink href={whatsappUrl} external>
-              <MessageCircle className="size-5" />
+              <WhatsAppIcon className="size-5" />
               Escribinos por WhatsApp
             </ButtonLink>
           </div>
@@ -46,7 +48,7 @@ export function Contact() {
 
         <ul className="space-y-6">
           <ContactItem
-            icon={<MessageCircle className="size-5" />}
+            icon={<WhatsAppIcon className="size-5" />}
             label="WhatsApp"
           >
             <a
@@ -58,7 +60,10 @@ export function Contact() {
               {site.phone}
             </a>
           </ContactItem>
-          <ContactItem icon={<AtSign className="size-5" />} label="Instagram">
+          <ContactItem
+            icon={<InstagramIcon className="size-5" />}
+            label="Instagram"
+          >
             <a
               href={site.instagram}
               target="_blank"
@@ -68,7 +73,10 @@ export function Contact() {
               {site.instagramHandle}
             </a>
           </ContactItem>
-          <ContactItem icon={<MapPin className="size-5" />} label="Dónde">
+          <ContactItem
+            icon={<MapPin className="size-5" />}
+            label="Dónde encontrarnos"
+          >
             {site.address}, {site.city}
           </ContactItem>
         </ul>
