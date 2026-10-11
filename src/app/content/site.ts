@@ -4,6 +4,7 @@ type NavLink = {
 };
 
 type TimeSlot = {
+  num: string;
   start: string;
   end: string;
 };
@@ -58,9 +59,9 @@ export const site: Site = {
       days: "Lunes a Jueves",
       activeDay: ["lunes", "martes", "miércoles", "jueves"],
       slots: [
-        { start: "09:00", end: "10:20" },
-        { start: "10:30", end: "11:45" },
-        { start: "12:00", end: "13:20" },
+        { num: "1", start: "09:00", end: "10:20" },
+        { num: "2", start: "10:30", end: "11:45" },
+        { num: "3", start: "12:00", end: "13:20" },
       ],
     },
     {
@@ -68,19 +69,19 @@ export const site: Site = {
       days: "Lunes y Miércoles",
       activeDay: ["lunes", "miércoles"],
       slots: [
-        { start: "15:00", end: "16:20" },
-        { start: "16:30", end: "17:45" },
+        { num: "1", start: "15:00", end: "16:20" },
+        { num: "2", start: "16:30", end: "17:45" },
       ],
     },
     {
-      title: "Por las tardes",
+      title: "Por la tarde y noche",
       days: "Martes y Jueves",
       activeDay: ["martes", "jueves"],
       slots: [
-        { start: "15:00", end: "16:20" },
-        { start: "16:30", end: "17:45" },
-        { start: "18:00", end: "19:20" },
-        { start: "19:30", end: "20:45" },
+        { num: "1", start: "15:00", end: "16:20" },
+        { num: "2", start: "16:30", end: "17:45" },
+        { num: "3", start: "18:00", end: "19:20" },
+        { num: "4", start: "19:30", end: "20:45" },
       ],
     },
   ],
@@ -89,7 +90,7 @@ export const site: Site = {
 export const weekDays: WeekDay[] = [
   { id: "lunes", initial: "L" },
   { id: "martes", initial: "M" },
-  { id: "miércoles", initial: "X" },
+  { id: "miércoles", initial: "Mi" },
   { id: "jueves", initial: "J" },
 ];
 

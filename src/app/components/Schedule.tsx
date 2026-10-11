@@ -16,7 +16,7 @@ export function Schedule() {
           {site.schedule.map((block) => (
             <article
               key={block.days}
-              className="rounded-2xl bg-white p-6 shadow-sm"
+              className="rounded-2xl bg-white p-5 shadow-sm"
             >
               <div>
                 <p className="mt-1 text-xl font-medium text-slate-500">
@@ -45,14 +45,23 @@ export function Schedule() {
                 </div>
               </div>
 
-              <div>
-                <ul className="mt-6 space-y-3">
-                  {block.slots.map((slot) => (
-                    <li key={slot.start} className="text-lg font-semibold">
-                      {slot.start} a {slot.end}
-                    </li>
-                  ))}
-                </ul>
+              <div className="mt-5 rounded-2xl bg-mist-100 p-2">
+                <div className="flex justify-between">
+                  <ul>
+                    {block.slots.map((slot) => (
+                      <li key={slot.num} className="text-lg font-semibold">
+                        {slot.num}
+                      </li>
+                    ))}
+                  </ul>
+                  <ul>
+                    {block.slots.map((slot) => (
+                      <li key={slot.start} className="text-lg font-semibold">
+                        {slot.start} - {slot.end}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </article>
           ))}
