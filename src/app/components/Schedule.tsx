@@ -19,10 +19,13 @@ export function Schedule() {
               className="rounded-2xl bg-white p-5 shadow-sm"
             >
               <div>
-                <p className="mt-1 text-lg font-medium text-slate-400">
-                  {block.title}
-                </p>
-                <h2 className="font-display text-xl font-bold text-brand uppercase">
+                <span className="mt-1 flex items-center justify-between text-lg font-medium text-slate-400">
+                  <p>{block.title}</p>
+                  <p className="flex size-7 items-center justify-center rounded-full bg-mist-100">
+                    {block.titleNum}
+                  </p>
+                </span>
+                <h2 className="mt-1 font-display text-xl font-bold text-brand uppercase">
                   {block.days}
                 </h2>
                 <div className="mt-2 flex gap-2" aria-hidden="true">
@@ -46,28 +49,26 @@ export function Schedule() {
               </div>
 
               <div className="mt-5 rounded-2xl bg-mist-100 p-2">
-                <div className="flex justify-between">
-                  <ul>
-                    {block.slots.map((slot) => (
-                      <li
-                        key={slot.num}
-                        className="mt-2.5 size-6 items-center justify-center rounded-md bg-accent-dif p-1 text-center text-sm"
-                      >
-                        {slot.num}
-                      </li>
-                    ))}
-                  </ul>
-                  <ul>
-                    {block.slots.map((slot) => (
-                      <li
-                        key={slot.start}
-                        className="text-1xl mt-2.5 font-semibold"
-                      >
-                        {slot.start} - {slot.end}
-                      </li>
-                    ))}
-                  </ul>
+                <div className="px-3">
+                  <span className="font-sans text-xs font-semibold text-slate-500 uppercase">
+                    horarios
+                  </span>
                 </div>
+                <ul className="m-1.5 mt-2 space-y-2">
+                  {block.slots.map((slot, index) => (
+                    <li
+                      key={slot.start}
+                      className="flex items-center justify-between rounded-xl bg-white px-3 py-2"
+                    >
+                      <span className="flex size-6 items-center justify-center rounded-md bg-accent-dif text-sm font-semibold text-brand">
+                        {index + 1}
+                      </span>
+                      <span className="">
+                        {slot.start} - {slot.end}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </article>
           ))}

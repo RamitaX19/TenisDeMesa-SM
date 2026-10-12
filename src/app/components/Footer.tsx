@@ -36,6 +36,16 @@ export function Footer() {
             <WhatsAppIcon className="size-5" />
           </a>
         </div>
+        <span className="flex gap-1">
+          <p>Desarrollado por</p>
+          <a
+            href="https://wa.me/5491126364952"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ByRamaDev
+          </a>
+        </span>
       </Container>
     </footer>
   );

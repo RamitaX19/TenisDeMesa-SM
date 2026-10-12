@@ -4,7 +4,6 @@ type NavLink = {
 };
 
 type TimeSlot = {
-  num: string;
   start: string;
   end: string;
 };
@@ -18,6 +17,7 @@ type WeekDay = {
 
 type ScheduleBlock = {
   title: string;
+  titleNum: string;
   days: string;
   activeDay: Day[];
   slots: TimeSlot[];
@@ -56,32 +56,35 @@ export const site: Site = {
   schedule: [
     {
       title: "Por las mañanas",
+      titleNum: "1",
       days: "Lunes a Jueves",
       activeDay: ["lunes", "martes", "miércoles", "jueves"],
       slots: [
-        { num: "1", start: "09:00", end: "10:20" },
-        { num: "2", start: "10:30", end: "11:45" },
-        { num: "3", start: "12:00", end: "13:20" },
+        { start: "09:00", end: "10:20" },
+        { start: "10:30", end: "11:45" },
+        { start: "12:00", end: "13:20" },
       ],
     },
     {
       title: "Por las tardes",
+      titleNum: "2",
       days: "Lunes y Miércoles",
       activeDay: ["lunes", "miércoles"],
       slots: [
-        { num: "1", start: "15:00", end: "16:20" },
-        { num: "2", start: "16:30", end: "17:45" },
+        { start: "15:00", end: "16:20" },
+        { start: "16:30", end: "17:45" },
       ],
     },
     {
       title: "Por la tarde y noche",
+      titleNum: "3",
       days: "Martes y Jueves",
       activeDay: ["martes", "jueves"],
       slots: [
-        { num: "1", start: "15:00", end: "16:20" },
-        { num: "2", start: "16:30", end: "17:45" },
-        { num: "3", start: "18:00", end: "19:20" },
-        { num: "4", start: "19:30", end: "20:45" },
+        { start: "15:00", end: "16:20" },
+        { start: "16:30", end: "17:45" },
+        { start: "18:00", end: "19:20" },
+        { start: "19:30", end: "20:45" },
       ],
     },
   ],
