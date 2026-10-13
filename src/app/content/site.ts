@@ -35,6 +35,14 @@ type Site = {
   phone: string;
   instagramHandle: string;
   nav: NavLink[];
+  classes: ClassGroup[];
+  classFrequency: string;
+};
+
+type ClassGroup = {
+  name: string;
+  ages: string;
+  description: string;
 };
 
 export const site: Site = {
@@ -88,6 +96,27 @@ export const site: Site = {
       ],
     },
   ],
+  classes: [
+    {
+      name: "Chicos",
+      ages: "6 a 12 años",
+      description:
+        "Juegos, desafíos y mucha pelotita: aprenden a jugar mientras se divierten y hacen amigos.",
+    },
+    {
+      name: "Jóvenes",
+      ages: "13 a 17 años",
+      description:
+        "Sumá efecto a tus golpes, ganá velocidad y animate a competir.",
+    },
+    {
+      name: "Adultos",
+      ages: "18 años o más",
+      description:
+        "Nunca es tarde para agarrar la paleta: entrená, despejá la cabeza y pasala bien.",
+    },
+  ],
+  classFrequency: "2 veces por semana",
 };
 
 export const weekDays: WeekDay[] = [
@@ -97,6 +126,7 @@ export const weekDays: WeekDay[] = [
   { id: "jueves", initial: "J" },
 ];
 
-const whatsappMessage = "¡Hola Sebastian! Quiero reservar una clase de prueba.";
+const whatsappMessage =
+  "¡Hola Sebastian! Quiero anotarme en las clases de tenis de mesa.";
 
 export const whatsappUrl = `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(whatsappMessage)}`;

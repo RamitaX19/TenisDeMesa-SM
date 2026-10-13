@@ -8,13 +8,23 @@
   "js/ts.tsdk.path": "node_modules/typescript/lib",
   "js/ts.tsdk.promptToUseWorkspaceVersion": true,
   "cSpell.ignoreWords": [
+    "Encontrá",
     "Escribinos",
     "Formacion",
+    "Sumate",
     "Vení",
     "contanos",
     "miercoles",
     "pingpong",
     "tenisdemesa"
   ],
-  "cSpell.words": ["Calamuchita"]
+  "cSpell.words": [
+    "Calamuchita",
+    "despejá",
+    "entrená",
+    "ganá",
+    "pasala",
+    "pelotita",
+    "Sumá"
+  ]
 }

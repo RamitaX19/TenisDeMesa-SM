@@ -16,7 +16,7 @@ export function Hero() {
           {site.description}
         </p>
         <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-          <ButtonLink href="#contacto">Reserva tu clase de prueba</ButtonLink>
+          <ButtonLink href="#contacto">Quiero anotarme</ButtonLink>
           <ButtonLink href="#clases" variant="secondary">
             Ver clases
           </ButtonLink>

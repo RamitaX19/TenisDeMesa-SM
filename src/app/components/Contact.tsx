@@ -35,7 +35,7 @@ export function Contact() {
           <SectionHeading
             tone="dark"
             eyebrow="Contacto"
-            title="Vení a probar una clase"
+            title="Sumate a jugar"
             description="Escribinos por WhatsApp, contanos si ya jugaste antes y te recomendamos el turno ideal para vos."
           />
           <div className="mt-10">
