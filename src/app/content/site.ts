@@ -129,4 +129,8 @@ export const weekDays: WeekDay[] = [
 const whatsappMessage =
   "¡Hola Sebastian! Quiero anotarme en las clases de tenis de mesa.";
 
-export const whatsappUrl = `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(whatsappMessage)}`;
+export function getWhatsappUrl(message: string) {
+  return `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(message)}`;
+}
+
+export const whatsappUrl = getWhatsappUrl(whatsappMessage);

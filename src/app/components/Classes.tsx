@@ -1,7 +1,23 @@
 import { Container } from "@/app/components/Container";
 import { SectionHeading } from "@/app/components/SectionHeading";
-import { CalendarDays } from "lucide-react";
-import { site } from "@/app/content/site";
+import {
+  ArrowRight,
+  CalendarDays,
+  Footprints,
+  GlassWater,
+  Shirt,
+  TowelRack,
+} from "lucide-react";
+import { getWhatsappUrl, site } from "@/app/content/site";
+import { PingPongIcon } from "@/app/components/icons/PingPongIcon";
+
+const thingsToBring = [
+  { label: "Tu paleta", icon: <PingPongIcon className="size-6" /> },
+  { label: "Agua", icon: <GlassWater className="size-6" /> },
+  { label: "Toalla chica", icon: <TowelRack className="size-6" /> },
+  { label: "Zapatillas cómodas", icon: <Footprints className="size-6" /> },
+  { label: "Ropa cómoda", icon: <Shirt className="size-6" /> },
+];
 
 export function Classes() {
   return (
@@ -36,12 +52,41 @@ export function Classes() {
               </h3>
               <p className="mt-3 flex-1 text-slate-600">{group.description}</p>
 
-              <div className="mt-6 flex items-center gap-2 border-t border-slate-200 pt-4 text-sm font-medium text-slate-500">
-                <CalendarDays className="size-4" />
-                {site.classFrequency}
+              <div className="mt-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-2 border-t border-slate-200 pt-4 text-sm">
+                <span className="flex items-center gap-2 font-medium whitespace-nowrap text-slate-500">
+                  <CalendarDays className="size-4 shrink-0" />
+                  {site.classFrequency}
+                </span>
+                <a
+                  href={getWhatsappUrl(
+                    `¡Hola Sebastian! Quiero info sobre la clase de ${group.name.toLowerCase()}.`,
+                  )}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-1 rounded-full bg-accent-dif px-1.5 py-1 font-semibold text-accent-dark hover:text-brand"
+                >
+                  Consultar
+                  <span className="sr-only"> por la clase de {group.name}</span>
+                  <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
+                </a>
               </div>
             </article>
           ))}
+        </div>
+        <div className="mt-12 rounded-2xl bg-mist-100 p-6 md:p-8">
+          <h3 className="font-display text-2xl font-bold text-brand uppercase">
+            ¿Qué necesitás traer?
+          </h3>
+          <ul className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-3 lg:grid-cols-5">
+            {thingsToBring.map((item) => (
+              <li key={item.label} className="flex items-center gap-3">
+                <span className="flex size-12 shrink-0 items-center justify-center rounded-full bg-white text-accent-dark shadow-sm">
+                  {item.icon}
+                </span>
+                <span className="font-medium text-slate-700">{item.label}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </Container>
     </section>
