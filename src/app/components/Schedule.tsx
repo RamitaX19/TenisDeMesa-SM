@@ -25,9 +25,9 @@ export function Schedule() {
                     {block.titleNum}
                   </p>
                 </span>
-                <h2 className="mt-1 font-display text-xl font-bold text-brand uppercase">
+                <h3 className="mt-1 font-display text-xl font-bold text-brand uppercase">
                   {block.days}
-                </h2>
+                </h3>
                 <div className="mt-2 flex gap-2" aria-hidden="true">
                   {weekDays.map((day) => {
                     const isActive = block.activeDay.includes(day.id);

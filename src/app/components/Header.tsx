@@ -37,7 +37,7 @@ export function Header() {
         </nav>
 
         <ButtonLink href="#contacto" size="sm">
-          Clase de prueba
+          Contactame
         </ButtonLink>
       </Container>
     </header>
