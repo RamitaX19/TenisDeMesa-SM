@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Oswald } from "next/font/google";
 import { Header } from "@/app/components/Header";
 import { site } from "@/app/content/site";
@@ -16,8 +16,19 @@ const oswald = Oswald({
 });
 
 export const metadata: Metadata = {
-  title: site.name,
-  description: site.description,
+  title: `Tenis de Mesa SM | Clases de ping pong en ${site.city}`,
+  description: site.seoDescription,
+  openGraph: {
+    title: site.name,
+    description: site.seoDescription,
+    siteName: site.name,
+    locale: "es_AR",
+    type: "website",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#062555",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

@@ -37,6 +37,7 @@ type Site = {
   nav: NavLink[];
   classes: ClassGroup[];
   classFrequency: string;
+  seoDescription: string;
 };
 
 type ClassGroup = {
@@ -56,6 +57,8 @@ export const site: Site = {
   instagram: "https://www.instagram.com/tenisdemesa_sm/",
   instagramHandle: "@tenisdemesa_sm",
   phone: "+54 9 3516745726",
+  seoDescription:
+    "Clases de tenis de mesa para chicos, jóvenes y adultos en Santa Rosa de Calamuchita, Córdoba. De lunes a jueves, mañana y tarde. Escribinos por WhatsApp.",
   nav: [
     { label: "Clases", href: "#clases" },
     { label: "Horarios", href: "#horarios" },
