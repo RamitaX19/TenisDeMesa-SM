@@ -4,7 +4,7 @@ import { site } from "@/app/content/site";
 
 export function Hero() {
   return (
-    <section className="bg-brand py-20 text-white md:py-32">
+    <section id="inicio" className="bg-brand py-20 text-white md:py-32">
       <Container>
         <p className="font-semibold tracking-widest text-accent uppercase">
           Escuela de pingpong para todas las edades

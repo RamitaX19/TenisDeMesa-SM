@@ -10,7 +10,7 @@ export function Header() {
   return (
     <HeaderShell>
       <Container className="flex h-full items-center justify-between gap-4">
-        <Link href="/" className="flex h-full items-center py-1.5">
+        <a href="#inicio" className="flex h-full items-center py-1.5">
           <Image
             src="/logo.webp"
             alt={site.name}
@@ -18,7 +18,7 @@ export function Header() {
             height={641}
             className="h-full w-auto"
           />
-        </Link>
+        </a>
 
         <nav aria-label="Principal" className="hidden md:block">
           <ul className="flex gap-8">
