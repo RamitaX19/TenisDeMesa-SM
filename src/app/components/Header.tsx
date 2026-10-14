@@ -1,24 +1,22 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ButtonLink } from "@/app/components/ButtonLink";
 import { Container } from "@/app/components/Container";
+import { HeaderShell } from "@/app/components/HeaderShell";
+import { MobileMenu } from "@/app/components/MobileMenu";
 import { site } from "@/app/content/site";
-import Image from "next/image";
-import { MobileMenu } from "./MobileMenu";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 h-20 border-b border-white/10 bg-brand text-white">
+    <HeaderShell>
       <Container className="flex h-full items-center justify-between gap-4">
-        <Link
-          href="/"
-          className="flex items-center gap-3 font-display text-lg font-bold tracking-wide uppercase md:text-xl"
-        >
+        <Link href="/" className="flex h-full items-center py-1.5">
           <Image
             src="/logo.webp"
             alt={site.name}
             width={600}
             height={641}
-            className="h-20 w-auto"
+            className="h-full w-auto"
           />
         </Link>
 
@@ -37,13 +35,14 @@ export function Header() {
           </ul>
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="hidden md:block">
           <ButtonLink href="#contacto" size="sm">
             Contactame
           </ButtonLink>
-          <MobileMenu links={site.nav} />
         </div>
+
+        <MobileMenu links={site.nav} />
       </Container>
-    </header>
+    </HeaderShell>
   );
 }

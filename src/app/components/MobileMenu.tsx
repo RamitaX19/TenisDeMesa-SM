@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { Container } from "@/app/components/Container";
+import { ButtonLink } from "@/app/components/ButtonLink";
 import type { NavLink } from "@/app/content/site";
 
 type MobileMenuProps = {
@@ -29,23 +29,29 @@ export function MobileMenu({ links }: MobileMenuProps) {
         <nav
           id="mobile-menu"
           aria-label="Menú"
-          className="absolute inset-x-0 top-full border-b border-white/10 bg-brand shadow-lg"
+          className="absolute inset-x-3 top-full mt-2 rounded-3xl border border-white/10 bg-brand p-4 shadow-xl in-data-[scrolled=true]:inset-x-0"
         >
-          <Container>
-            <ul className="divide-y divide-white/10 py-2">
-              {links.map((link) => (
-                <li key={link.href}>
-                  <a
-                    href={link.href}
-                    onClick={() => setIsOpen(false)}
-                    className="block py-3 font-medium text-white/80 transition-colors hover:text-white"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </Container>
+          <ul className="divide-y divide-white/10">
+            {links.map((link) => (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className="block px-2 py-3 font-medium text-white/80 transition-colors hover:text-white"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          <ButtonLink
+            href="#contacto"
+            onClick={() => setIsOpen(false)}
+            className="mt-4 w-full"
+          >
+            Contactame
+          </ButtonLink>
         </nav>
       )}
     </div>
