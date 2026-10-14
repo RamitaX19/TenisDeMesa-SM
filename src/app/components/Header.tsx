@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { ButtonLink } from "@/app/components/ButtonLink";
 import { Container } from "@/app/components/Container";
 import { HeaderShell } from "@/app/components/HeaderShell";

@@ -27,7 +27,7 @@ export function SectionHeading({
   const colors = toneClasses[tone];
 
   return (
-    <div className="max-w-2xl">
+    <div className="max-w-2xl reveal">
       <p
         className={`text-sm font-semibold tracking-widest uppercase ${colors.eyebrow}`}
       >

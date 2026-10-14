@@ -6,10 +6,35 @@
   --color-accent: #67cded;
   --color-accent-dif: #c2f2ff;
   --color-accent-dark: #0a6fa8;
+  --color-whatsapp: #25d366;
+
+  --animate-fade-up: fade-up 0.7s ease-out both;
 }
 
 /* Fuentes: las variables las crea next/font en layout.tsx */
 @theme inline {
   --font-sans: var(--font-geist-sans);
   --font-display: var(--font-oswald);
+}
+
+/* Animaciones */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@utility reveal {
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: view()) {
+      animation: fade-up linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 25%;
+    }
+  }
 }

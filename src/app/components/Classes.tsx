@@ -33,7 +33,7 @@ export function Classes() {
           {site.classes.map((group, index) => (
             <article
               key={group.name}
-              className="flex flex-col rounded-2xl border border-slate-200 p-6 transition hover:-translate-y-1 hover:shadow-lg"
+              className="flex reveal flex-col rounded-2xl border border-slate-200 p-6 transition hover:-translate-y-1 hover:shadow-lg"
             >
               <div className="flex items-center justify-between">
                 <span
@@ -73,7 +73,7 @@ export function Classes() {
             </article>
           ))}
         </div>
-        <div className="mt-12 rounded-2xl bg-mist-100 p-6 md:p-8">
+        <div className="mt-12 reveal rounded-2xl bg-mist-100 p-6 md:p-8">
           <h3 className="font-display text-2xl font-bold text-brand uppercase">
             ¿Qué necesitás traer?
           </h3>

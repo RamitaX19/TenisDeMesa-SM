@@ -46,7 +46,7 @@ export function Contact() {
           </div>
         </div>
 
-        <ul className="space-y-6">
+        <ul className="reveal space-y-6">
           <ContactItem
             icon={<WhatsAppIcon className="size-5" />}
             label="WhatsApp"

@@ -16,7 +16,7 @@ export function Schedule() {
           {site.schedule.map((block) => (
             <article
               key={block.days}
-              className="rounded-2xl bg-white p-5 shadow-sm"
+              className="reveal rounded-2xl bg-white p-5 shadow-sm"
             >
               <div>
                 <span className="mt-1 flex items-center justify-between text-lg font-medium text-slate-400">
