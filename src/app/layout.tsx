@@ -4,7 +4,7 @@ import { Header } from "@/app/components/Header";
 import { site } from "@/app/content/site";
 import "./globals.css";
 import { Footer } from "@/app/components/Footer";
-import { FloatingWhatsApp } from "./components/FloatingWhatsApp";
+import { FloatingWhatsApp } from "@/app/components/FloatingWhatsApp";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
