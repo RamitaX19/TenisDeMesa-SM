@@ -3,6 +3,7 @@ import { ButtonLink } from "@/app/components/ButtonLink";
 import { Container } from "@/app/components/Container";
 import { site } from "@/app/content/site";
 import Image from "next/image";
+import { MobileMenu } from "./MobileMenu";
 
 export function Header() {
   return (
@@ -36,9 +37,12 @@ export function Header() {
           </ul>
         </nav>
 
-        <ButtonLink href="#contacto" size="sm">
-          Contactame
-        </ButtonLink>
+        <div className="flex items-center gap-2">
+          <ButtonLink href="#contacto" size="sm">
+            Contactame
+          </ButtonLink>
+          <MobileMenu links={site.nav} />
+        </div>
       </Container>
     </header>
   );
