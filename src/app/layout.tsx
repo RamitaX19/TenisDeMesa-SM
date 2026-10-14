@@ -26,7 +26,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="es"
       className={`scroll-pt-20 scroll-smooth ${geistSans.variable} ${oswald.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col bg-white text-slate-900">
+      <body className="flex min-h-full flex-col bg-brand text-slate-900">
         <Header />
         {children}
         <Footer />
