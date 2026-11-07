@@ -49,7 +49,7 @@ export const site: Site = {
   name: "Tenis de Mesa SM Calamuchita",
   city: "Santa Rosa de Calamuchita",
   description:
-    "Aprende técnica, mejora tu juego y diviértete en un ambiente cercano. Para niños y adultos, uniendo generaciones!.",
+    "Aprende técnica, mejora tu juego y diviértete en un ambiente cercano. Para niños y adultos, uniendo generaciones!",
   coach: "Sebastian Molina",
   address: "SUM - Centro de Formación Deportiva Municipal",
   whatsapp: "5493516745726",
