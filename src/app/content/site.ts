@@ -16,7 +16,6 @@ type WeekDay = {
 };
 
 type ScheduleBlock = {
-  title: string;
   days: string;
   activeDay: Day[];
   slots: TimeSlot[];
@@ -66,7 +65,6 @@ export const site: Site = {
   ],
   schedule: [
     {
-      title: "Por la mañana",
       days: "Martes",
       activeDay: ["martes"],
       slots: [
@@ -82,7 +80,6 @@ export const site: Site = {
       ],
     },
     {
-      title: "Por la tarde",
       days: "Jueves",
       activeDay: ["jueves"],
       slots: [

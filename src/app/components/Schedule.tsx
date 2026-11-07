@@ -1,6 +1,7 @@
 import { Container } from "@/app/components/Container";
-import { site, weekDays } from "@/app/content/site";
+import { site, weekDays, whatsappUrl } from "@/app/content/site";
 import { SectionHeading } from "@/app/components/SectionHeading";
+import { ButtonLink } from "@/app/components/ButtonLink";
 
 export function Schedule() {
   return (
@@ -19,13 +20,10 @@ export function Schedule() {
               className="reveal rounded-2xl bg-white p-5 shadow-sm"
             >
               <div className="flex flex-col items-center justify-center">
-                <span className="mt-1 flex items-center justify-between text-lg font-medium text-slate-400">
-                  <p>{block.title}</p>
-                </span>
-                <h3 className="mt-1 font-display text-xl font-bold text-brand uppercase">
+                <h3 className="mt-1 font-display text-3xl font-bold text-brand uppercase">
                   {block.days}
                 </h3>
-                <div className="mt-2 flex gap-2" aria-hidden="true">
+                <div className="mt-3 flex gap-2" aria-hidden="true">
                   {weekDays.map((day) => {
                     const isActive = block.activeDay.includes(day.id);
 
@@ -45,51 +43,56 @@ export function Schedule() {
                 </div>
               </div>
 
-              <div className="flex items-center justify-center gap-4">
-                <div className="mt-5 rounded-2xl bg-mist-100 p-2">
+              <div className="flex flex-col items-stretch justify-between gap-4 lg:flex-row">
+                <div className="mt-5 w-full rounded-2xl bg-mist-100 p-2">
                   <div className="px-3">
                     <span className="font-sans text-xs font-semibold text-slate-500 uppercase">
-                      horarios
+                      horarios de la mañana
                     </span>
                   </div>
                   <ul className="m-1.5 mt-2 space-y-2">
                     {block.slots.map((slot, index) => (
                       <li
                         key={slot.start}
-                        className="flex items-center justify-between gap-2 rounded-xl bg-white px-3 py-2"
+                        className="flex w-full items-center justify-between rounded-xl bg-white px-3 py-2"
                       >
                         <span className="flex size-6 items-center justify-center rounded-md bg-accent-dif text-sm font-semibold text-brand">
                           {index + 1}
                         </span>
-                        <span className="">
+                        <span>
                           {slot.start} - {slot.end}
                         </span>
                       </li>
                     ))}
                   </ul>
                 </div>
-                <div className="mt-5 rounded-2xl bg-mist-100 p-2">
+                <div className="mt-5 w-full rounded-2xl bg-mist-100 p-2">
                   <div className="px-3">
                     <span className="font-sans text-xs font-semibold text-slate-500 uppercase">
-                      horarios
+                      horarios de la tarde
                     </span>
                   </div>
                   <ul className="m-1.5 mt-2 space-y-2">
                     {block.slots1.map((slot, index) => (
                       <li
                         key={slot.start}
-                        className="flex items-center justify-between gap-2 rounded-xl bg-white px-3 py-2"
+                        className="flex items-center justify-between rounded-xl bg-white px-3 py-2"
                       >
                         <span className="flex size-6 items-center justify-center rounded-md bg-accent-dif text-sm font-semibold text-brand">
                           {index + 1}
                         </span>
-                        <span className="">
+                        <span>
                           {slot.start} - {slot.end}
                         </span>
                       </li>
                     ))}
                   </ul>
                 </div>
+              </div>
+              <div className="mt-4 flex items-center justify-center">
+                <ButtonLink href={whatsappUrl} external size="sm">
+                  Consulta un horario para venir
+                </ButtonLink>
               </div>
             </article>
           ))}
