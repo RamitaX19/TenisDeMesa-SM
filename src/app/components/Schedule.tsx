@@ -12,18 +12,15 @@ export function Schedule() {
           description="Clases de lunes a jueves, a la mañana y a la tarde. Vení el día que mejor te quede."
         />
 
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <div className="mt-12 grid gap-6 md:grid-cols-2">
           {site.schedule.map((block) => (
             <article
               key={block.days}
               className="reveal rounded-2xl bg-white p-5 shadow-sm"
             >
-              <div>
+              <div className="flex flex-col items-center justify-center">
                 <span className="mt-1 flex items-center justify-between text-lg font-medium text-slate-400">
                   <p>{block.title}</p>
-                  <p className="flex size-7 items-center justify-center rounded-full bg-mist-100">
-                    {block.titleNum}
-                  </p>
                 </span>
                 <h3 className="mt-1 font-display text-xl font-bold text-brand uppercase">
                   {block.days}
@@ -48,27 +45,51 @@ export function Schedule() {
                 </div>
               </div>
 
-              <div className="mt-5 rounded-2xl bg-mist-100 p-2">
-                <div className="px-3">
-                  <span className="font-sans text-xs font-semibold text-slate-500 uppercase">
-                    horarios
-                  </span>
+              <div className="flex items-center justify-center gap-4">
+                <div className="mt-5 rounded-2xl bg-mist-100 p-2">
+                  <div className="px-3">
+                    <span className="font-sans text-xs font-semibold text-slate-500 uppercase">
+                      horarios
+                    </span>
+                  </div>
+                  <ul className="m-1.5 mt-2 space-y-2">
+                    {block.slots.map((slot, index) => (
+                      <li
+                        key={slot.start}
+                        className="flex items-center justify-between gap-2 rounded-xl bg-white px-3 py-2"
+                      >
+                        <span className="flex size-6 items-center justify-center rounded-md bg-accent-dif text-sm font-semibold text-brand">
+                          {index + 1}
+                        </span>
+                        <span className="">
+                          {slot.start} - {slot.end}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <ul className="m-1.5 mt-2 space-y-2">
-                  {block.slots.map((slot, index) => (
-                    <li
-                      key={slot.start}
-                      className="flex items-center justify-between rounded-xl bg-white px-3 py-2"
-                    >
-                      <span className="flex size-6 items-center justify-center rounded-md bg-accent-dif text-sm font-semibold text-brand">
-                        {index + 1}
-                      </span>
-                      <span className="">
-                        {slot.start} - {slot.end}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
+                <div className="mt-5 rounded-2xl bg-mist-100 p-2">
+                  <div className="px-3">
+                    <span className="font-sans text-xs font-semibold text-slate-500 uppercase">
+                      horarios
+                    </span>
+                  </div>
+                  <ul className="m-1.5 mt-2 space-y-2">
+                    {block.slots1.map((slot, index) => (
+                      <li
+                        key={slot.start}
+                        className="flex items-center justify-between gap-2 rounded-xl bg-white px-3 py-2"
+                      >
+                        <span className="flex size-6 items-center justify-center rounded-md bg-accent-dif text-sm font-semibold text-brand">
+                          {index + 1}
+                        </span>
+                        <span className="">
+                          {slot.start} - {slot.end}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </article>
           ))}
