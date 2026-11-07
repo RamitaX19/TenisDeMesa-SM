@@ -10,7 +10,7 @@ export function Schedule() {
         <SectionHeading
           eyebrow="Horarios"
           title="Elegí tu turno"
-          description="Clases de lunes a jueves, a la mañana y a la tarde. Vení el día que mejor te quede."
+          description="Clases los martes y jueves, a la mañana y a la tarde. Vení el día que mejor te quede."
         />
 
         <div className="mt-12 grid gap-6 md:grid-cols-2">
