@@ -42,6 +42,7 @@ export function Footer() {
             href="https://wa.me/5491126364952"
             target="_blank"
             rel="noopener noreferrer"
+            className="font-bold text-white transition-all duration-300 [text-shadow:0_0_10px_#fff,0_0_20px_#fff] hover:[text-shadow:0_0_12px_#fff,0_0_12px_#fff,0_0_25px_#fff]"
           >
             ByRamaDev
           </a>

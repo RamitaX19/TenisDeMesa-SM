@@ -2,6 +2,8 @@ import { Hero } from "@/app/components/Hero";
 import { Schedule } from "@/app/components/Schedule";
 import { Contact } from "@/app/components/Contact";
 import { Classes } from "@/app/components/Classes";
+import { History } from "@/app/components/History";
+import { Gallery } from "@/app/components/Gallery";
 
 export default function Home() {
   return (
@@ -9,6 +11,8 @@ export default function Home() {
       <Hero />
       <Classes />
       <Schedule />
+      <History />
+      <Gallery />
       <Contact />
     </main>
   );
